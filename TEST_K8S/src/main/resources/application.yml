@@ -1,0 +1,51 @@
+#日志
+logging:
+ level.org.springframework: INFO
+ level.cn.gwssi: DEBUG
+ level.root: INFO
+ file: log/log.log
+ 
+
+#Spring
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html; charset=utf-8
+#    设置缓存为false 为了热部署 host refresh
+    cache: false
+#  datasource:  
+#    url: ${PROJECT_DB_URL:jdbc:mysql://106.38.120.12:44408/mysql_tde?characterEncoding=UTF-8}  
+#    username: ${PROJECT_DB_USERNAME:root}
+#    password: ${PROJECT_DB_PASSWORD:Gwssi@2017}
+#    driverClassName: com.mysql.jdbc.Driver
+#    maxIdle: 5
+#    maxWait: 10000
+#    minIdle: 2
+#    initialSize: 3
+#    validationQuery: SELECT 1
+#  redis:
+#    host: ${PROJECT_REDIS_ADDRESS:106.38.120.12}
+#    port: ${PROJECT_REDIS_PORT:44411}
+#    password: ${PROJECT_REDIS_PASSWORD:}
+#  data:
+#    mongodb:
+#      host: ${PROJECT_MONGO_HOST:114.115.156.237}
+#      port: ${PROJECT_MONGO_PORT:27027}
+#      username: ${PROJECT_MONGO_USERID:gwssi}
+#      password: ${PROJECT_MONGO_PASSWORD:gwssi123}
+#      database: ${PROJECT_MONGO_DATABASENAME:bigdata}
+    
+#环境配置
+server:
+    port: 8080
+    tomcat:  
+      accesslog:  
+      # 开启日志访问  
+        enabled: true  
+      # 日志保存路径  
+        directory: /tmp/logs  
+        maxThreads: 100
+        minSpareThreads: 5

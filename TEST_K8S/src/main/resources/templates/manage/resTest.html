@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head th:include="manage/head :: head"></head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" th:include="manage/nav :: top"></nav>
+
+		<div class="container">
+
+			<div class="starter-template">
+
+				<h1 id="essentialInfo" class="page-header">信息资源列表接口</h1>
+
+				<a href="/manage/processWS?url=http%3a%2f%2flocalhost%3a8080%2fservices%2ftestService%3fwsdl" target="_blank" class="btn btn-primary btn-lg">解析返回webservicejson接口</a>
+				<a href="/manage/resListJson" target="_blank" class="btn btn-primary btn-lg">获取已经发布的接口列表</a>
+				<a href="/manage/resJsonComplete/resCode/version" target="_blank" class="btn btn-primary btn-lg">通过resCode和版本号获取资源信息</a>
+				<a href="/manage/resJsonComplete/resCode/" target="_blank" class="btn btn-primary btn-lg">通过resCode获取最新版本资源信息</a>
+
+				<h1 id="essentialInfo" class="page-header">信息资源调用测试 - <small>Url encode 地址 http://tool.chinaz.com/tools/urlencode.aspx </small></h1>
+
+				<form>
+					<div class="form-group">
+						<label for="apiPath">接口地址</label>
+						<input value="/manage/service/?access_token=111111" type="text" class="form-control" id="apiPath" placeholder="测试接口地址" />
+					</div>
+					<div class="form-group">
+						<label for="request">测试参数</label>
+						<textarea id="apiRequest" class="form-control" rows="5" placeholder="提交参数">
+{
+	"condition": [{
+		"dataCode": "arg0",
+		"dataValue": "aaa",
+		"operation": "eq"
+	},{
+		"dataCode": "arg1",
+		"dataValue": "测试",
+		"operation": "eq"
+	},{
+		"dataCode": "testBean.age",
+		"dataValue": "222",
+		"operation": "eq"
+	},{
+		"dataCode": "testBean.createTime",
+		"dataValue": "2018",
+		"operation": "eq"
+	},{
+		"dataCode": "testBean.name",
+		"dataValue": "test",
+		"operation": "eq"
+	},{
+		"dataCode": "testBean.id",
+		"dataValue": "222",
+		"operation": "eq"
+	}],
+	"sid": "sayHello5Service"
+}	
+
+			
+						</textarea>
+					</div>
+
+					<button onclick="dosubmit();" type="button" class="btn btn-default">提交</button>
+				</form>
+
+			</div>
+
+		</div>
+
+		<div class="bs-docs-footer" th:include="manage/foot :: foot"></div>
+
+		<script type="text/javascript">
+			function dosubmit() {
+
+				var apiPath = $("#apiPath").val();
+				var apiRequest = $("#apiRequest").val();
+
+				//	if(apiPath != "") {
+				//	window.open(apiPath + "?" + apiRequest);
+				//	}
+
+				$.ajax({
+					type: 'post',
+					url: apiPath,
+					dataType: 'json',
+					data: apiRequest,
+					contentType: 'application/json',
+					success: function(result) {
+						alert(JSON.stringify(result));
+
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert("发生错误" + XMLHttpRequest + textStatus + errorThrown)
+					}
+
+				});
+
+			}
+		</script>
+
+	</body>
+
+</html>

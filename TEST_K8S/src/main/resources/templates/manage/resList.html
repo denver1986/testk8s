@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head th:include="manage/head :: head"></head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" th:include="manage/nav :: top"></nav>
+
+		<div class="container">
+
+			<div class="starter-template">
+
+				<h1 id="essentialInfo" class="page-header">信息资源列表</h1>
+
+				<table class="table table-bordered">
+
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>信息资源名称</th>
+							<th>信息资源代码</th>
+							<th>信息资源类型</th>
+							<th>更新时间</th>
+							<th>isEnabled</th>
+							<th>isLocked</th>
+							<th>isStored</th>
+							<th>isStructured</th>
+							<th>版本号</th>
+							<th>#</th>
+							<th>#</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr th:each="info,infoStat : ${serviceList}">
+							<td th:text="${(infoStat.index + 1)}"></td>
+							<td th:text="${info.resourceName}"></td>
+							<td th:text="${info._id}"></td>
+							<td th:text="${T(cn.gwssi.common.Utils).provideTypeStr(info.resourceType)}"></td>
+							<td th:text="${info.upDatetime}"></td>
+							<td th:text="${info.isEnabled}"></td>
+							<td th:text="${info.isLocked}"></td>
+							<td th:text="${info.isStored}"></td>
+							<td th:text="${info.isStructured}"></td>
+							<td th:text="${info.version}"></td>
+							<!--表达式用法
+							"${info.wsServiceName + '/' + info.wsFunctionName}"
+							"${info.resPublic=='1'}? '是' : '否'"
+							"${T(cn.gwssi.common.Utils).provideTypeStr(info.provideType)}"
+							-->
+							<td>
+								<a th:href="@{'/manage/resJsonComplete/' + ${T(java.net.URLEncoder).encode(info._id)} + '/' + ${info.version}}" target="_blank">资源JSON</a>
+							</td>
+							<td>
+								<a th:href="@{'/manage/resJson/' + ${T(java.net.URLEncoder).encode(info._id)} + '/'}" target="_blank">资源所有版本</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+		</div>
+
+		<div class="bs-docs-footer" th:include="manage/foot :: foot"></div>
+
+	</body>
+
+</html>

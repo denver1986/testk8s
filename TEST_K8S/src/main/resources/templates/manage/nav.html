@@ -1,0 +1,24 @@
+<nav th:fragment="top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">信息资源管理</a>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li th:class="${#httpServletRequest.requestURI=='/manage/addResPre'}? 'active' : ''">
+					<a href="/manage/addResPre?access_token=111111">添加资源</a>
+				</li>
+				<li th:class="${#httpServletRequest.requestURI=='/manage/resList'}? 'active' : ''">
+					<a href="/manage/resList?access_token=111111">资源列表</a>
+				</li>
+				<li th:class="${#httpServletRequest.requestURI=='/manage/resTest'}? 'active' : ''">
+					<a href="/manage/resTest?access_token=111111">测试接口</a>
+				</li>
+				<li th:class="${#httpServletRequest.requestURI=='/manage/query'}? 'active' : ''">
+					<a target="_blank" href="/manage/query/serviceCode?access_token=111111">通用查询</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</nav>

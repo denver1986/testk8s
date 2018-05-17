@@ -1,0 +1,748 @@
+2018-05-11 14:25:39.532  INFO 13240 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 13240 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 14:25:39.535  INFO 13240 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 14:25:39.905  INFO 13240 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@857c98: startup date [Fri May 11 14:25:39 CST 2018]; root of context hierarchy
+2018-05-11 14:25:40.767  INFO 13240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 14:25:40.786  INFO 13240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 14:25:41.280  INFO 13240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ee54ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-11 14:25:41.966  INFO 13240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 14:25:41.978  INFO 13240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 14:25:41.980  INFO 13240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 14:25:42.090  INFO 13240 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 14:25:42.091  INFO 13240 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2186 ms
+2018-05-11 14:25:42.330  INFO 13240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 14:25:42.331  INFO 13240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 14:25:42.331  INFO 13240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 14:25:42.331  INFO 13240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 14:25:42.332  INFO 13240 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-05-11 14:25:42.332  INFO 13240 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 14:25:42.730  INFO 13240 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: cfa0cf8f-0da9-4041-8cb2-6a6cdcb44a06
+
+2018-05-11 14:25:42.910  INFO 13240 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 14:25:42.911  INFO 13240 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 14:25:42.912  INFO 13240 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 14:25:42.913  INFO 13240 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 14:25:42.913  INFO 13240 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+2018-05-11 14:25:42.913  INFO 13240 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2018-05-11 14:25:42.914  INFO 13240 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+2018-05-11 14:25:43.218  INFO 13240 --- [main] a.OAuth2AuthorizationServerConfiguration : Initialized OAuth2 Client
+
+security.oauth2.client.client-id = 5108794f-73b3-4c35-8197-fc9dc960206f
+security.oauth2.client.client-secret = 0364a158-9cdd-4029-8f9c-61ecf9a517a7
+
+
+2018-05-11 14:25:43.382  INFO 13240 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@857c98: startup date [Fri May 11 14:25:39 CST 2018]; root of context hierarchy
+2018-05-11 14:25:43.438  INFO 13240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 14:25:43.440  INFO 13240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 14:25:43.441  INFO 13240 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 14:25:43.480  INFO 13240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:25:43.480  INFO 13240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:25:43.549  INFO 13240 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:25:45.904  INFO 13240 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 14:25:45.904  INFO 13240 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 14:25:46.306  INFO 13240 --- [cluster-ClusterId{value='5af53769a1566033b8dbaba4', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4935}] to 114.115.156.237:27027
+2018-05-11 14:25:46.320  INFO 13240 --- [cluster-ClusterId{value='5af53769a1566033b8dbaba4', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=114.115.156.237:27027, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 14]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=11646479}
+2018-05-11 14:25:46.321  INFO 13240 --- [cluster-ClusterId{value='5af53769a1566033b8dbaba4', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-05-11 14:25:46.831  INFO 13240 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2018-05-11 14:25:46.968  INFO 13240 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c94b32, org.springframework.security.web.context.SecurityContextPersistenceFilter@806be2, org.springframework.security.web.header.HeaderWriterFilter@28f79b, org.springframework.security.web.authentication.logout.LogoutFilter@12de62a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@14b2422, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7bd320, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1394368, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@167e2e5, org.springframework.security.web.session.SessionManagementFilter@10de4d, org.springframework.security.web.access.ExceptionTranslationFilter@1461a5e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@836c8]
+2018-05-11 14:25:46.972  INFO 13240 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16585b6, org.springframework.security.web.context.SecurityContextPersistenceFilter@753e51, org.springframework.security.web.header.HeaderWriterFilter@80f27e, org.springframework.security.web.authentication.logout.LogoutFilter@e16976, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@d2f9d2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14e5af3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1353f95, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d779f, org.springframework.security.web.session.SessionManagementFilter@1b067e6, org.springframework.security.web.access.ExceptionTranslationFilter@1b159d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16a52da]
+2018-05-11 14:25:47.327  INFO 13240 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 14:25:47.421  INFO 13240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 14:25:47.426  INFO 13240 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 8.506 seconds (JVM running for 19.95)
+2018-05-11 14:26:07.012  INFO 13240 --- [cluster-ClusterId{value='5af53769a1566033b8dbaba4', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:4936}] to 114.115.156.237:27027
+2018-05-11 14:33:39.823  INFO 13868 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 13868 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 14:33:39.826  INFO 13868 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 14:33:40.119  INFO 13868 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@666aea: startup date [Fri May 11 14:33:40 CST 2018]; root of context hierarchy
+2018-05-11 14:33:40.799  INFO 13868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 14:33:40.816  INFO 13868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 14:33:41.259  INFO 13868 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$652f5549] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-11 14:33:41.814  INFO 13868 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 14:33:41.823  INFO 13868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 14:33:41.824  INFO 13868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 14:33:41.917  INFO 13868 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 14:33:41.918  INFO 13868 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1802 ms
+2018-05-11 14:33:42.156  INFO 13868 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 14:33:42.156  INFO 13868 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 14:33:42.156  INFO 13868 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 14:33:42.156  INFO 13868 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 14:33:42.157  INFO 13868 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-05-11 14:33:42.158  INFO 13868 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 14:33:42.467  INFO 13868 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 48fcdf02-fa85-479c-b0f8-15b3ff27a17f
+
+2018-05-11 14:33:42.638  INFO 13868 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 14:33:42.639  INFO 13868 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 14:33:42.640  INFO 13868 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 14:33:42.640  INFO 13868 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 14:33:42.641  INFO 13868 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+2018-05-11 14:33:42.641  INFO 13868 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2018-05-11 14:33:42.642  INFO 13868 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+2018-05-11 14:33:42.939  INFO 13868 --- [main] a.OAuth2AuthorizationServerConfiguration : Initialized OAuth2 Client
+
+security.oauth2.client.client-id = 82b71d42-c0a1-4442-a9d1-88d2b49017c3
+security.oauth2.client.client-secret = e61b893b-0904-42a1-981e-0984175c1161
+
+
+2018-05-11 14:33:43.071  INFO 13868 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@666aea: startup date [Fri May 11 14:33:40 CST 2018]; root of context hierarchy
+2018-05-11 14:33:43.133  INFO 13868 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 14:33:43.135  INFO 13868 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 14:33:43.135  INFO 13868 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 14:33:43.168  INFO 13868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:33:43.169  INFO 13868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:33:43.215  INFO 13868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:33:43.759  WARN 13868 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+2018-05-11 14:33:43.759  INFO 13868 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-11 14:33:43.761  INFO 13868 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-05-11 14:33:43.897  INFO 13868 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-05-11 14:33:43.901 ERROR 13868 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+2018-05-11 14:36:14.747  INFO 4372 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 4372 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 14:36:14.750  INFO 4372 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 14:36:15.062  INFO 4372 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11952ec: startup date [Fri May 11 14:36:15 CST 2018]; root of context hierarchy
+2018-05-11 14:36:15.725  INFO 4372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 14:36:15.746  INFO 4372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 14:36:16.696  INFO 4372 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 14:36:16.705  INFO 4372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 14:36:16.706  INFO 4372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 14:36:16.793  INFO 4372 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 14:36:16.794  INFO 4372 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1734 ms
+2018-05-11 14:36:17.037  INFO 4372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 14:36:17.037  INFO 4372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 14:36:17.038  INFO 4372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 14:36:17.038  INFO 4372 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 14:36:17.039  INFO 4372 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-05-11 14:36:17.040  INFO 4372 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 14:36:17.355  INFO 4372 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 0c11086f-ace7-462f-9691-3d8a55f85743
+
+2018-05-11 14:36:17.494  INFO 4372 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 14:36:17.495  INFO 4372 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 14:36:17.496  INFO 4372 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 14:36:17.496  INFO 4372 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 14:36:17.497  INFO 4372 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+2018-05-11 14:36:17.497  INFO 4372 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2018-05-11 14:36:17.497  INFO 4372 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+2018-05-11 14:36:17.764  INFO 4372 --- [main] a.OAuth2AuthorizationServerConfiguration : Initialized OAuth2 Client
+
+security.oauth2.client.client-id = a72f3e9e-42f5-48b4-b36f-34d88e79b2d5
+security.oauth2.client.client-secret = 644b1664-8dab-4e32-9713-b882d8ef2120
+
+
+2018-05-11 14:36:17.913  INFO 4372 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11952ec: startup date [Fri May 11 14:36:15 CST 2018]; root of context hierarchy
+2018-05-11 14:36:17.967  INFO 4372 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 14:36:17.970  INFO 4372 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 14:36:17.970  INFO 4372 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 14:36:18.008  INFO 4372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:36:18.008  INFO 4372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:36:18.053  INFO 4372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 14:36:20.132  INFO 4372 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 14:36:20.840  INFO 4372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2018-05-11 14:36:20.985  INFO 4372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16caa25, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a1e3aa, org.springframework.security.web.header.HeaderWriterFilter@1546b41, org.springframework.security.web.authentication.logout.LogoutFilter@144b834, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7fb846, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8bc9cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fb05a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1166b0c, org.springframework.security.web.session.SessionManagementFilter@15b123f, org.springframework.security.web.access.ExceptionTranslationFilter@2ffab6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b531a0]
+2018-05-11 14:36:20.989  INFO 4372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cc74ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@7dbf04, org.springframework.security.web.header.HeaderWriterFilter@1a05f29, org.springframework.security.web.authentication.logout.LogoutFilter@1c82fcd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1ba5129, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@187ab25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f5173b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1552e5, org.springframework.security.web.session.SessionManagementFilter@1c7b600, org.springframework.security.web.access.ExceptionTranslationFilter@1a5da52, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@791eab]
+2018-05-11 14:36:21.198  INFO 4372 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 14:36:21.198  INFO 4372 --- [cluster-ClusterId{value='5af539e4a1566011146c7285', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongodb-driver-core-3.4.3.jar:na]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_04]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.7.0_04]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_04]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157) ~[na:1.7.0_04]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391) ~[na:1.7.0_04]
+	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_04]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.4.3.jar:na]
+	... 3 common frames omitted
+
+2018-05-11 14:36:21.256  INFO 4372 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 14:36:21.263  INFO 4372 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 6.958 seconds (JVM running for 11.962)
+2018-05-11 15:17:06.903  INFO 9600 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 9600 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 15:17:06.905  INFO 9600 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 15:17:07.190  INFO 9600 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12c1f9e: startup date [Fri May 11 15:17:07 CST 2018]; root of context hierarchy
+2018-05-11 15:17:07.854  INFO 9600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:17:07.871  INFO 9600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:17:08.790  INFO 9600 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 15:17:08.799  INFO 9600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 15:17:08.800  INFO 9600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 15:17:08.893  INFO 9600 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 15:17:08.893  INFO 9600 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1705 ms
+2018-05-11 15:17:09.113  INFO 9600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 15:17:09.114  INFO 9600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 15:17:09.114  INFO 9600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 15:17:09.114  INFO 9600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 15:17:09.115  INFO 9600 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-05-11 15:17:09.115  INFO 9600 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 15:17:10.580  INFO 9600 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 15:17:10.580  INFO 9600 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 15:17:11.057  INFO 9600 --- [cluster-ClusterId{value='5af54376a15660258046ced4', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 114.115.156.237:27027
+
+com.mongodb.MongoSecurityException: Exception authenticating
+	at com.mongodb.connection.NativeAuthenticator.authenticate(NativeAuthenticator.java:48) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.InternalStreamConnectionInitializer.authenticateAll(InternalStreamConnectionInitializer.java:109) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:46) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:116) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongodb-driver-core-3.4.3.jar:na]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_04]
+Caused by: com.mongodb.MongoCommandException: Command failed with error 18: 'auth failed' on server 114.115.156.237:27027. The full response is { "ok" : 0.0, "errmsg" : "auth failed", "code" : 18, "codeName" : "AuthenticationFailed" }
+	at com.mongodb.connection.CommandHelper.createCommandFailureException(CommandHelper.java:170) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.CommandHelper.receiveCommandResult(CommandHelper.java:123) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:32) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.NativeAuthenticator.authenticate(NativeAuthenticator.java:46) ~[mongodb-driver-core-3.4.3.jar:na]
+	... 5 common frames omitted
+
+2018-05-11 15:17:11.151  INFO 9600 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 1ec0ff6a-c728-4efd-8b7a-206ae33f13ae
+
+2018-05-11 15:17:11.292  INFO 9600 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 15:17:11.293  INFO 9600 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 15:17:11.294  INFO 9600 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 15:17:11.294  INFO 9600 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 15:17:11.295  INFO 9600 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+2018-05-11 15:17:11.296  INFO 9600 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2018-05-11 15:17:11.296  INFO 9600 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:17:11.555  INFO 9600 --- [main] a.OAuth2AuthorizationServerConfiguration : Initialized OAuth2 Client
+
+security.oauth2.client.client-id = c981bfcf-3083-4542-87ba-aaa04a4237d8
+security.oauth2.client.client-secret = ea11cb2c-0867-4e61-9cc1-4d25482cd3d8
+
+
+2018-05-11 15:17:11.708  INFO 9600 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12c1f9e: startup date [Fri May 11 15:17:07 CST 2018]; root of context hierarchy
+2018-05-11 15:17:11.755  INFO 9600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 15:17:11.756  INFO 9600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 15:17:11.758  INFO 9600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:17:11.758  INFO 9600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 15:17:11.793  INFO 9600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:17:11.793  INFO 9600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:17:11.863  INFO 9600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:17:12.843  INFO 9600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2018-05-11 15:17:12.950  INFO 9600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15b0c96, org.springframework.security.web.context.SecurityContextPersistenceFilter@17e1e41, org.springframework.security.web.header.HeaderWriterFilter@11bd81b, org.springframework.security.web.authentication.logout.LogoutFilter@285c99, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1bf68b9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e569da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@146fa72, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9751ad, org.springframework.security.web.session.SessionManagementFilter@58776f, org.springframework.security.web.access.ExceptionTranslationFilter@b13fb9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@199959]
+2018-05-11 15:17:12.954  INFO 9600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d2322, org.springframework.security.web.context.SecurityContextPersistenceFilter@1694ea, org.springframework.security.web.header.HeaderWriterFilter@1d1ef25, org.springframework.security.web.authentication.logout.LogoutFilter@2256bf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6d3784, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8a97ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fc4cfc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@adbc8d, org.springframework.security.web.session.SessionManagementFilter@1ab6f46, org.springframework.security.web.access.ExceptionTranslationFilter@9b1640, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@106ce4]
+2018-05-11 15:17:13.184  INFO 9600 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 15:17:13.242  INFO 9600 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 15:17:13.248  INFO 9600 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 6.785 seconds (JVM running for 11.945)
+2018-05-11 15:19:43.425  INFO 8776 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 8776 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 15:19:43.428  INFO 8776 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 15:19:43.714  INFO 8776 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@17052cb: startup date [Fri May 11 15:19:43 CST 2018]; root of context hierarchy
+2018-05-11 15:19:44.385  INFO 8776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:19:44.402  INFO 8776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:19:45.367  INFO 8776 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 15:19:45.376  INFO 8776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 15:19:45.376  INFO 8776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 15:19:45.466  INFO 8776 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 15:19:45.466  INFO 8776 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1754 ms
+2018-05-11 15:19:45.694  INFO 8776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 15:19:45.694  INFO 8776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 15:19:45.695  INFO 8776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 15:19:45.695  INFO 8776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 15:19:45.696  INFO 8776 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-05-11 15:19:45.696  INFO 8776 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 15:19:47.266  INFO 8776 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 15:19:47.266  INFO 8776 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 15:19:47.826  INFO 8776 --- [cluster-ClusterId{value='5af54413a1566022488be342', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4996}] to 114.115.156.237:27027
+2018-05-11 15:19:47.837  INFO 8776 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 53d25eb2-80dc-43eb-92f4-c1adcea0a406
+
+2018-05-11 15:19:47.875  INFO 8776 --- [cluster-ClusterId{value='5af54413a1566022488be342', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=114.115.156.237:27027, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 14]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=37238494}
+2018-05-11 15:19:47.877  INFO 8776 --- [cluster-ClusterId{value='5af54413a1566022488be342', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-05-11 15:19:47.968  INFO 8776 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 15:19:47.969  INFO 8776 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2018-05-11 15:19:47.970  INFO 8776 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 15:19:47.970  INFO 8776 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2018-05-11 15:19:47.971  INFO 8776 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+2018-05-11 15:19:47.971  INFO 8776 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2018-05-11 15:19:47.972  INFO 8776 --- [main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:19:48.220  INFO 8776 --- [main] a.OAuth2AuthorizationServerConfiguration : Initialized OAuth2 Client
+
+security.oauth2.client.client-id = acb5ef48-cfde-430a-9fd1-c9925a617b22
+security.oauth2.client.client-secret = a1c4d9ab-428b-413e-9034-7149be25ddb4
+
+
+2018-05-11 15:19:48.362  INFO 8776 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@17052cb: startup date [Fri May 11 15:19:43 CST 2018]; root of context hierarchy
+2018-05-11 15:19:48.410  INFO 8776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 15:19:48.412  INFO 8776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 15:19:48.413  INFO 8776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:19:48.414  INFO 8776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 15:19:48.453  INFO 8776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:19:48.453  INFO 8776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:19:48.507  INFO 8776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:19:49.477  INFO 8776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2018-05-11 15:19:49.610  INFO 8776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31bf83, org.springframework.security.web.context.SecurityContextPersistenceFilter@1042a06, org.springframework.security.web.header.HeaderWriterFilter@d62b78, org.springframework.security.web.authentication.logout.LogoutFilter@c01e8f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@b7c7da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1322864, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10b457b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@145ca4, org.springframework.security.web.session.SessionManagementFilter@366b0b, org.springframework.security.web.access.ExceptionTranslationFilter@7f8059, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b4a934]
+2018-05-11 15:19:49.614  INFO 8776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a396c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@171489c, org.springframework.security.web.header.HeaderWriterFilter@ed4b3d, org.springframework.security.web.authentication.logout.LogoutFilter@6b8a22, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@39e560, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5628aa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@87e770, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ffabbf, org.springframework.security.web.session.SessionManagementFilter@e6b10a, org.springframework.security.web.access.ExceptionTranslationFilter@1395c95, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@157f91b]
+2018-05-11 15:19:49.853  INFO 8776 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 15:19:49.909  INFO 8776 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 15:19:49.913  INFO 8776 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 6.938 seconds (JVM running for 11.778)
+2018-05-11 15:20:09.648  INFO 8776 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-11 15:20:09.649  INFO 8776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-11 15:20:09.673  INFO 8776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-05-11 15:23:38.908  INFO 8892 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 8892 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 15:23:38.911  INFO 8892 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 15:23:39.200  INFO 8892 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@333bfc: startup date [Fri May 11 15:23:39 CST 2018]; root of context hierarchy
+2018-05-11 15:23:39.790  INFO 8892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:23:39.807  INFO 8892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:23:40.570  INFO 8892 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 15:23:40.580  INFO 8892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 15:23:40.582  INFO 8892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 15:23:40.780  INFO 8892 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 15:23:40.780  INFO 8892 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1583 ms
+2018-05-11 15:23:40.950  INFO 8892 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 15:23:40.956  INFO 8892 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 15:23:40.956  INFO 8892 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 15:23:40.957  INFO 8892 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 15:23:40.957  INFO 8892 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 15:23:42.437  INFO 8892 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 15:23:42.437  INFO 8892 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 15:23:43.004  INFO 8892 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@333bfc: startup date [Fri May 11 15:23:39 CST 2018]; root of context hierarchy
+2018-05-11 15:23:43.232  INFO 8892 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 15:23:43.233  INFO 8892 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 15:23:43.235  INFO 8892 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:23:43.235  INFO 8892 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 15:23:43.264  INFO 8892 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:23:43.265  INFO 8892 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:23:43.310  INFO 8892 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:23:44.125  INFO 8892 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 15:23:44.185  INFO 8892 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 15:23:44.189  INFO 8892 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 5.717 seconds (JVM running for 10.339)
+2018-05-11 15:23:44.288  INFO 8892 --- [cluster-ClusterId{value='5af544fea1566022bc778601', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4997}] to 114.115.156.237:27027
+2018-05-11 15:23:44.552  INFO 8892 --- [cluster-ClusterId{value='5af544fea1566022bc778601', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=114.115.156.237:27027, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 14]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=262520863}
+2018-05-11 15:23:44.553  INFO 8892 --- [cluster-ClusterId{value='5af544fea1566022bc778601', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-05-11 15:24:10.248  INFO 8892 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-11 15:24:10.248  INFO 8892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-11 15:24:10.275  INFO 8892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-05-11 15:24:11.426  INFO 8892 --- [http-nio-8080-exec-2] top.gwssi.k8s.test.TestController        : dbname = bigdata
+2018-05-11 15:24:35.249  INFO 1384 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 1384 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 15:24:35.252  INFO 1384 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 15:24:35.543  INFO 1384 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d4872a: startup date [Fri May 11 15:24:35 CST 2018]; root of context hierarchy
+2018-05-11 15:24:36.105  INFO 1384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:24:36.125  INFO 1384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:24:36.873  INFO 1384 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 15:24:36.883  INFO 1384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 15:24:36.883  INFO 1384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 15:24:37.081  INFO 1384 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 15:24:37.082  INFO 1384 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1541 ms
+2018-05-11 15:24:37.248  INFO 1384 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 15:24:37.253  INFO 1384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 15:24:37.254  INFO 1384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 15:24:37.254  INFO 1384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 15:24:37.254  INFO 1384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 15:24:38.714  INFO 1384 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 15:24:38.715  INFO 1384 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 15:24:39.058  INFO 1384 --- [cluster-ClusterId{value='5af54536a15660056865f549', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4998}] to 114.115.156.237:27027
+2018-05-11 15:24:39.080  INFO 1384 --- [cluster-ClusterId{value='5af54536a15660056865f549', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=114.115.156.237:27027, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 14]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=20422294}
+2018-05-11 15:24:39.081  INFO 1384 --- [cluster-ClusterId{value='5af54536a15660056865f549', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-05-11 15:24:39.396  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d4872a: startup date [Fri May 11 15:24:35 CST 2018]; root of context hierarchy
+2018-05-11 15:24:39.472  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 15:24:39.473  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 15:24:39.476  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:24:39.476  INFO 1384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 15:24:39.514  INFO 1384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:24:39.514  INFO 1384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:24:39.571  INFO 1384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:24:40.415  INFO 1384 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 15:24:40.465  INFO 1384 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 15:24:40.468  INFO 1384 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 5.646 seconds (JVM running for 10.291)
+2018-05-11 15:25:03.047  INFO 1384 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-11 15:25:03.047  INFO 1384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-11 15:25:03.071  INFO 1384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-05-11 15:25:03.101  INFO 1384 --- [http-nio-8080-exec-1] top.gwssi.k8s.test.TestController        : dbname = bigdata
+2018-05-11 15:26:24.617  INFO 12600 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 12600 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 15:26:24.620  INFO 12600 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 15:26:24.914  INFO 12600 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1fca9cc: startup date [Fri May 11 15:26:24 CST 2018]; root of context hierarchy
+2018-05-11 15:26:25.501  INFO 12600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:26:25.519  INFO 12600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:26:26.277  INFO 12600 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 15:26:26.287  INFO 12600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 15:26:26.288  INFO 12600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 15:26:26.499  INFO 12600 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 15:26:26.499  INFO 12600 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1587 ms
+2018-05-11 15:26:26.663  INFO 12600 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 15:26:26.668  INFO 12600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 15:26:26.668  INFO 12600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 15:26:26.668  INFO 12600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 15:26:26.668  INFO 12600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 15:26:28.143  INFO 12600 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 15:26:28.144  INFO 12600 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 15:26:28.766  INFO 12600 --- [cluster-ClusterId{value='5af545a4a1566031389b2a41', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4999}] to 114.115.156.237:27027
+2018-05-11 15:26:28.791  INFO 12600 --- [cluster-ClusterId{value='5af545a4a1566031389b2a41', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=114.115.156.237:27027, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 14]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=22712666}
+2018-05-11 15:26:28.792  INFO 12600 --- [cluster-ClusterId{value='5af545a4a1566031389b2a41', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-05-11 15:26:28.821  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1fca9cc: startup date [Fri May 11 15:26:24 CST 2018]; root of context hierarchy
+2018-05-11 15:26:28.893  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 15:26:28.895  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 15:26:28.897  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:26:28.897  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 15:26:28.926  INFO 12600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:26:28.926  INFO 12600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:26:28.987  INFO 12600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:26:29.816  INFO 12600 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 15:26:29.868  INFO 12600 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 15:26:29.873  INFO 12600 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 5.704 seconds (JVM running for 10.291)
+2018-05-11 15:26:37.169  INFO 12600 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-11 15:26:37.169  INFO 12600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-11 15:26:37.193  INFO 12600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-05-11 15:26:37.223  INFO 12600 --- [http-nio-8080-exec-1] top.gwssi.k8s.test.TestController        : dbname = bigdata1111
+2018-05-11 15:27:52.026  INFO 13152 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 13152 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 15:27:52.028  INFO 13152 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 15:27:52.319  INFO 13152 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@143c773: startup date [Fri May 11 15:27:52 CST 2018]; root of context hierarchy
+2018-05-11 15:27:52.901  INFO 13152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:27:52.920  INFO 13152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:27:53.657  INFO 13152 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 15:27:53.667  INFO 13152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 15:27:53.667  INFO 13152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 15:27:53.874  INFO 13152 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 15:27:53.874  INFO 13152 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1558 ms
+2018-05-11 15:27:54.035  INFO 13152 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 15:27:54.039  INFO 13152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 15:27:54.039  INFO 13152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 15:27:54.039  INFO 13152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 15:27:54.039  INFO 13152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 15:27:55.502  INFO 13152 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 15:27:55.503  INFO 13152 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 15:27:56.165  INFO 13152 --- [cluster-ClusterId{value='5af545fba156603360196747', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:5000}] to 114.115.156.237:27027
+2018-05-11 15:27:56.193  INFO 13152 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@143c773: startup date [Fri May 11 15:27:52 CST 2018]; root of context hierarchy
+2018-05-11 15:27:56.248  INFO 13152 --- [cluster-ClusterId{value='5af545fba156603360196747', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=114.115.156.237:27027, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 14]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=81989585}
+2018-05-11 15:27:56.249  INFO 13152 --- [cluster-ClusterId{value='5af545fba156603360196747', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-05-11 15:27:56.273  INFO 13152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 15:27:56.275  INFO 13152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 15:27:56.277  INFO 13152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:27:56.277  INFO 13152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 15:27:56.308  INFO 13152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:27:56.309  INFO 13152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:27:56.371  INFO 13152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:27:57.190  INFO 13152 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 15:27:57.242  INFO 13152 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 15:27:57.246  INFO 13152 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 5.667 seconds (JVM running for 10.288)
+2018-05-11 15:28:04.607  INFO 13152 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-11 15:28:04.608  INFO 13152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-11 15:28:04.632  INFO 13152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-05-11 15:28:04.871  INFO 13152 --- [http-nio-8080-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:5001}] to 114.115.156.237:27027
+2018-05-11 15:28:04.923 ERROR 13152 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Command failed with error 13: 'not authorized on testDB to execute command { listCollections: 1, cursor: { batchSize: 0 } }' on server 114.115.156.237:27027. The full response is { "ok" : 0.0, "errmsg" : "not authorized on testDB to execute command { listCollections: 1, cursor: { batchSize: 0 } }", "code" : 13, "codeName" : "Unauthorized" }; nested exception is com.mongodb.MongoCommandException: Command failed with error 13: 'not authorized on testDB to execute command { listCollections: 1, cursor: { batchSize: 0 } }' on server 114.115.156.237:27027. The full response is { "ok" : 0.0, "errmsg" : "not authorized on testDB to execute command { listCollections: 1, cursor: { batchSize: 0 } }", "code" : 13, "codeName" : "Unauthorized" }] with root cause
+
+com.mongodb.MongoCommandException: Command failed with error 13: 'not authorized on testDB to execute command { listCollections: 1, cursor: { batchSize: 0 } }' on server 114.115.156.237:27027. The full response is { "ok" : 0.0, "errmsg" : "not authorized on testDB to execute command { listCollections: 1, cursor: { batchSize: 0 } }", "code" : 13, "codeName" : "Unauthorized" }
+	at com.mongodb.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:115) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.CommandProtocol.execute(CommandProtocol.java:114) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:168) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:289) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServerConnection.command(DefaultServerConnection.java:176) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:216) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:207) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:113) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.ListCollectionsOperation$1.call(ListCollectionsOperation.java:178) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.ListCollectionsOperation$1.call(ListCollectionsOperation.java:173) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:435) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:408) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.ListCollectionsOperation.execute(ListCollectionsOperation.java:173) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.operation.ListCollectionsOperation.execute(ListCollectionsOperation.java:81) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.Mongo.execute(Mongo.java:836) ~[mongodb-driver-3.4.3.jar:na]
+	at com.mongodb.Mongo$2.execute(Mongo.java:823) ~[mongodb-driver-3.4.3.jar:na]
+	at com.mongodb.OperationIterable.iterator(OperationIterable.java:47) ~[mongodb-driver-3.4.3.jar:na]
+	at com.mongodb.OperationIterable.forEach(OperationIterable.java:70) ~[mongodb-driver-3.4.3.jar:na]
+	at com.mongodb.MappingIterable.forEach(MappingIterable.java:50) ~[mongodb-driver-3.4.3.jar:na]
+	at com.mongodb.MappingIterable.into(MappingIterable.java:60) ~[mongodb-driver-3.4.3.jar:na]
+	at com.mongodb.DB.getCollectionNames(DB.java:266) ~[mongodb-driver-3.4.3.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate$14.doInDB(MongoTemplate.java:1673) ~[spring-data-mongodb-1.10.10.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate$14.doInDB(MongoTemplate.java:1671) ~[spring-data-mongodb-1.10.10.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:466) ~[spring-data-mongodb-1.10.10.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.getCollectionNames(MongoTemplate.java:1671) ~[spring-data-mongodb-1.10.10.RELEASE.jar:na]
+	at top.gwssi.k8s.test.TestController.test1(TestController.java:23) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_04]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_04]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_04]
+	at java.lang.reflect.Method.invoke(Method.java:601) ~[na:1.7.0_04]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.7.0_04]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.7.0_04]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_04]
+
+2018-05-11 15:29:13.385  INFO 3256 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 3256 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 15:29:13.388  INFO 3256 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 15:29:13.672  INFO 3256 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15d85d7: startup date [Fri May 11 15:29:13 CST 2018]; root of context hierarchy
+2018-05-11 15:29:14.260  INFO 3256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:29:14.279  INFO 3256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 15:29:15.039  INFO 3256 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 15:29:15.048  INFO 3256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 15:29:15.049  INFO 3256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 15:29:15.263  INFO 3256 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 15:29:15.263  INFO 3256 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1593 ms
+2018-05-11 15:29:15.425  INFO 3256 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 15:29:15.429  INFO 3256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 15:29:15.429  INFO 3256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 15:29:15.429  INFO 3256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 15:29:15.429  INFO 3256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 15:29:16.919  INFO 3256 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[114.115.156.237:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 15:29:16.920  INFO 3256 --- [main] org.mongodb.driver.cluster               : Adding discovered server 114.115.156.237:27027 to client view of cluster
+2018-05-11 15:29:17.489  INFO 3256 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15d85d7: startup date [Fri May 11 15:29:13 CST 2018]; root of context hierarchy
+2018-05-11 15:29:17.711  INFO 3256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 15:29:17.713  INFO 3256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 15:29:17.714  INFO 3256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 15:29:17.715  INFO 3256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 15:29:17.745  INFO 3256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:29:17.745  INFO 3256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:29:17.797  INFO 3256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 15:29:18.622  INFO 3256 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 15:29:18.676  INFO 3256 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 15:29:18.681  INFO 3256 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 5.734 seconds (JVM running for 10.442)
+2018-05-11 15:29:21.289  INFO 3256 --- [cluster-ClusterId{value='5af5464ca156600cb8db9fb1', description='null'}-114.115.156.237:27027] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:5002}] to 114.115.156.237:27027
+2018-05-11 15:29:21.314  INFO 3256 --- [cluster-ClusterId{value='5af5464ca156600cb8db9fb1', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=114.115.156.237:27027, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 14]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=23657317}
+2018-05-11 15:29:21.315  INFO 3256 --- [cluster-ClusterId{value='5af5464ca156600cb8db9fb1', description='null'}-114.115.156.237:27027] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-05-11 15:29:26.942  INFO 3256 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-11 15:29:26.943  INFO 3256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-11 15:29:26.972  INFO 3256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2018-05-11 15:29:26.998  INFO 3256 --- [http-nio-8080-exec-1] top.gwssi.k8s.test.TestController        : getCollectionNames = org.springframework.data.mongodb.core.MongoTemplate@1af9569
+2018-05-11 18:05:35.162  INFO 8464 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 8464 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 18:05:35.165  INFO 8464 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 18:05:35.470  INFO 8464 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@f4d03: startup date [Fri May 11 18:05:35 CST 2018]; root of context hierarchy
+2018-05-11 18:05:36.081  INFO 8464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 18:05:36.101  INFO 8464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 18:05:36.894  INFO 8464 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 18:05:36.904  INFO 8464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 18:05:36.905  INFO 8464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 18:05:37.117  INFO 8464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 18:05:37.117  INFO 8464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1649 ms
+2018-05-11 18:05:37.284  INFO 8464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 18:05:37.288  INFO 8464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 18:05:37.289  INFO 8464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 18:05:37.289  INFO 8464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 18:05:37.289  INFO 8464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 18:05:48.887  INFO 8464 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[220.181.57.216:27027, 123.125.115.110:27027], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-05-11 18:05:48.888  INFO 8464 --- [main] org.mongodb.driver.cluster               : Adding discovered server 220.181.57.216:27027 to client view of cluster
+2018-05-11 18:05:48.923  INFO 8464 --- [main] org.mongodb.driver.cluster               : Adding discovered server 123.125.115.110:27027 to client view of cluster
+2018-05-11 18:05:49.616  INFO 8464 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@f4d03: startup date [Fri May 11 18:05:35 CST 2018]; root of context hierarchy
+2018-05-11 18:05:49.691  INFO 8464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String top.gwssi.k8s.ApplicationBoot.index()
+2018-05-11 18:05:49.693  INFO 8464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/1],produces=[application/json;charset=UTF-8]}" onto public java.lang.String top.gwssi.k8s.test.TestController.test1()
+2018-05-11 18:05:49.695  INFO 8464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-11 18:05:49.695  INFO 8464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-11 18:05:49.727  INFO 8464 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 18:05:49.728  INFO 8464 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 18:05:49.787  INFO 8464 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-11 18:05:50.629  INFO 8464 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-11 18:05:50.686  INFO 8464 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-11 18:05:50.690  INFO 8464 --- [main] top.gwssi.k8s.ApplicationBoot            : Started ApplicationBoot in 15.983 seconds (JVM running for 21.103)
+2018-05-11 18:06:08.936  INFO 8464 --- [cluster-ClusterId{value='5af56afca156602110216932', description='null'}-123.125.115.110:27027] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 123.125.115.110:27027
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongodb-driver-core-3.4.3.jar:na]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_04]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.7.0_04]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_04]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157) ~[na:1.7.0_04]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391) ~[na:1.7.0_04]
+	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_04]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.4.3.jar:na]
+	... 3 common frames omitted
+
+2018-05-11 18:06:08.936  INFO 8464 --- [cluster-ClusterId{value='5af56afca156602110216932', description='null'}-220.181.57.216:27027] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 220.181.57.216:27027
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongodb-driver-core-3.4.3.jar:na]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_04]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.7.0_04]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_04]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_04]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157) ~[na:1.7.0_04]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391) ~[na:1.7.0_04]
+	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_04]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongodb-driver-core-3.4.3.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.4.3.jar:na]
+	... 3 common frames omitted
+
+2018-05-11 18:07:58.207  INFO 2804 --- [main] top.gwssi.k8s.ApplicationBoot            : Starting ApplicationBoot on DESKTOP-V7VTUV0 with PID 2804 (D:\GWSSI\PROJECT\workspace\TEST_K8S\target\classes started by HALO in D:\GWSSI\PROJECT\workspace\TEST_K8S)
+2018-05-11 18:07:58.210  INFO 2804 --- [main] top.gwssi.k8s.ApplicationBoot            : No active profile set, falling back to default profiles: default
+2018-05-11 18:07:58.509  INFO 2804 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1567d79: startup date [Fri May 11 18:07:58 CST 2018]; root of context hierarchy
+2018-05-11 18:07:59.105  INFO 2804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 18:07:59.126  INFO 2804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-11 18:07:59.921  INFO 2804 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-11 18:07:59.932  INFO 2804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-11 18:07:59.933  INFO 2804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-05-11 18:08:00.148  INFO 2804 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-11 18:08:00.148  INFO 2804 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1642 ms
+2018-05-11 18:08:00.323  INFO 2804 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-11 18:08:00.327  INFO 2804 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-11 18:08:00.328  INFO 2804 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-11 18:08:00.328  INFO 2804 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-11 18:08:00.328  INFO 2804 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-11 18:08:02.668  WARN 2804 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testController': Unsatisfied dependency expressed through field 'mongoTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoDbFactory' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.MongoDbFactory]: Factory method 'mongoDbFactory' threw exception; nested exception is java.net.UnknownHostException: mongo
+2018-05-11 18:08:02.671  INFO 2804 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-05-11 18:08:02.690  INFO 2804 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-05-11 18:08:02.697 ERROR 2804 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testController': Unsatisfied dependency expressed through field 'mongoTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoDbFactory' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.MongoDbFactory]: Factory method 'mongoDbFactory' threw exception; nested exception is java.net.UnknownHostException: mongo
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at top.gwssi.k8s.ApplicationBoot.main(ApplicationBoot.java:21) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_04]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_04]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_04]
+	at java.lang.reflect.Method.invoke(Method.java:601) ~[na:1.7.0_04]
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527) [spring-boot-maven-plugin-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_04]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoDbFactory' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.MongoDbFactory]: Factory method 'mongoDbFactory' threw exception; nested exception is java.net.UnknownHostException: mongo
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoDbFactory' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.MongoDbFactory]: Factory method 'mongoDbFactory' threw exception; nested exception is java.net.UnknownHostException: mongo
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoDbFactory' defined in class path resource [top/gwssi/k8s/config/MongoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.MongoDbFactory]: Factory method 'mongoDbFactory' threw exception; nested exception is java.net.UnknownHostException: mongo
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389) ~[spring-context-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at top.gwssi.k8s.config.MongoConfig$$EnhancerBySpringCGLIB$$147e2cfc.mongoDbFactory(<generated>) ~[classes/:na]
+	at org.springframework.data.mongodb.config.AbstractMongoConfiguration.mongoTemplate(AbstractMongoConfiguration.java:101) ~[spring-data-mongodb-1.10.10.RELEASE.jar:na]
+	at top.gwssi.k8s.config.MongoConfig$$EnhancerBySpringCGLIB$$147e2cfc.CGLIB$mongoTemplate$7(<generated>) ~[classes/:na]
+	at top.gwssi.k8s.config.MongoConfig$$EnhancerBySpringCGLIB$$147e2cfc$$FastClassBySpringCGLIB$$6dc7b418.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) ~[spring-context-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at top.gwssi.k8s.config.MongoConfig$$EnhancerBySpringCGLIB$$147e2cfc.mongoTemplate(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_04]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_04]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_04]
+	at java.lang.reflect.Method.invoke(Method.java:601) ~[na:1.7.0_04]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.MongoDbFactory]: Factory method 'mongoDbFactory' threw exception; nested exception is java.net.UnknownHostException: mongo
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	... 60 common frames omitted
+Caused by: java.net.UnknownHostException: mongo
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:1.7.0_04]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866) ~[na:1.7.0_04]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258) ~[na:1.7.0_04]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1211) ~[na:1.7.0_04]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127) ~[na:1.7.0_04]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1063) ~[na:1.7.0_04]
+	at top.gwssi.k8s.config.MongoConfig.mongo(MongoConfig.java:36) ~[classes/:na]
+	at org.springframework.data.mongodb.config.AbstractMongoConfiguration.mongoDbFactory(AbstractMongoConfiguration.java:115) ~[spring-data-mongodb-1.10.10.RELEASE.jar:na]
+	at top.gwssi.k8s.config.MongoConfig$$EnhancerBySpringCGLIB$$147e2cfc.CGLIB$mongoDbFactory$15(<generated>) ~[classes/:na]
+	at top.gwssi.k8s.config.MongoConfig$$EnhancerBySpringCGLIB$$147e2cfc$$FastClassBySpringCGLIB$$6dc7b418.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) ~[spring-context-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at top.gwssi.k8s.config.MongoConfig$$EnhancerBySpringCGLIB$$147e2cfc.mongoDbFactory(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_04]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_04]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_04]
+	at java.lang.reflect.Method.invoke(Method.java:601) ~[na:1.7.0_04]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	... 61 common frames omitted
+

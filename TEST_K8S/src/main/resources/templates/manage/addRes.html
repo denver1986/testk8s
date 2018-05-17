@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+	<head th:include="manage/head :: head"></head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" th:include="manage/nav :: top"></nav>
+
+		<div class="container">
+
+			<div class="starter-template">
+
+				<h1 id="essentialInfo" class="page-header">基本信息（essentialInfo）</h1>
+				<form class="form-horizontal" id="essentialInfoForm">
+
+					<div class="form-group">
+						<label for="resName" class="col-sm-2 control-label">信息资源名称</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resName" class="form-control" id="resName" placeholder="resName" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resCode" class="col-sm-2 control-label">信息资源代码</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resCode" class="form-control" id="resCode" placeholder="resCode" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resProviderCode" class="col-sm-2 control-label">信息资源方代码</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resProviderCode" class="form-control" id="resProviderCode" placeholder="resProviderCode" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resSystem" class="col-sm-2 control-label">来源系统</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resSystem" class="form-control" id="resSystem" placeholder="resSystem" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resDb" class="col-sm-2 control-label">来源数据库</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resDb" class="form-control" id="resDb" placeholder="resDb" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resAbstract" class="col-sm-2 control-label">信息资源摘要</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resAbstract" class="form-control" id="resAbstract" placeholder="resAbstract" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resFormatClassify" class="col-sm-2 control-label">信息资源格式分类</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resFormatClassify" class="form-control" id="resFormatClassify" placeholder="resFormatClassify" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resFormatType" class="col-sm-2 control-label">信息资源格式类型</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resFormatType" class="form-control" id="resFormatType" placeholder="resFormatType" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resShareClassify" class="col-sm-2 control-label">共享方式分类</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resShareClassify" class="form-control" id="resShareClassify" placeholder="resShareClassify" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="resShareType" class="col-sm-2 control-label">共享类型</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.resShareType" class="form-control" id="resShareType" placeholder="resShareType" />
+						</div>
+					</div>
+
+				</form>
+
+				<h1 id="dataInfo" class="page-header">数据项信息（dataInfo）-<small>（rest接口返回的数据项或数据库接口的字段，webservice不需要配置。）</small></h1>
+
+				<form class="form-horizontal" id="dataInfoForm">
+
+					<div class="form-group">
+						<label for="dataName" class="col-sm-2 control-label">数据项名称</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dataName" class="form-control" id="dataName" placeholder="dataName" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dataCode" class="col-sm-2 control-label">数据项代码</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dataCode" class="form-control" id="dataCode" placeholder="dataCode" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">是否主键</label>
+						<div class="col-sm-10">
+							<label class="radio-inline"><input type="radio" v-model="fields.isPrimaryKey" name="isPrimaryKey" id="isPrimaryKey1" value="1"/>是</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.isPrimaryKey" name="isPrimaryKey" id="isPrimaryKey2" value="0"/>否</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dataSeqNo" class="col-sm-2 control-label">数据项顺序</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dataSeqNo" class="form-control" id="dataSeqNo" placeholder="dataSeqNo" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dataType" class="col-sm-2 control-label">数据类型</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dataType" class="form-control" id="dataType" placeholder="dataType" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dataLength" class="col-sm-2 control-label">数据长度</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dataLength" class="form-control" id="dataLength" placeholder="dataLength" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dataPrecision" class="col-sm-2 control-label">数据精度</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dataPrecision" class="form-control" id="dataPrecision" placeholder="dataPrecision" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dataMetaNum" class="col-sm-2 control-label">数据源编号</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dataMetaNum" class="form-control" id="dataMetaNum" placeholder="dataMetaNum" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="remark" class="col-sm-2 control-label">备注</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.remark" class="form-control" id="remark" placeholder="remark" />
+						</div>
+					</div>
+
+					<p style="text-align: right;"> <button v-on:click="add()" type="button" class="btn btn-lg btn-primary">添加  » </button> </p>
+
+					<ul id="dataInfoUl">
+						<li v-for="(item,index) in items">
+							{{ (index + 1) }} | {{ item.dataName }} -- {{ item.dataCode }} -- {{ item.isPrimaryKey }} -- {{ item.dataSeqNo }} -- {{ item.dataType }} -- {{ item.dataLength }} -- {{ item.dataPrecision }} -- {{ item.dataMetaNum }} -- {{ item.remark }} --
+							<a href="#dataInfoForm" v-on:click="del(index)">删除</a>
+						</li>
+					</ul>
+
+				</form>
+
+				<h1 id="providerInfo" class="page-header">数据提供信息（providerInfo）</h1>
+
+				<form class="form-horizontal" id="providerInfoForm">
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">提供方式</label>
+						<div class="col-sm-10">
+							<label class="radio-inline"><input type="radio" v-model="fields.provideType" name="provideType" id="provideType1" value="1"/>文件</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.provideType" name="provideType" id="provideType2" value="2"/>视图</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.provideType" name="provideType" id="provideType3" value="3"/>接口</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">文件访问协议</label>
+						<div class="col-sm-10">
+							<label class="radio-inline"><input type="radio" v-model="fields.fileProtocol" name="fileProtocol" id="fileProtocol1" value="ftp"/>ftp</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.fileProtocol" name="fileProtocol" id="fileProtocol2" value="nfs"/>nfs</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.fileProtocol" name="fileProtocol" id="fileProtocol3" value="local"/>local</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="fileAddress" class="col-sm-2 control-label">文件访问地址</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.fileAddress" class="form-control" id="fileAddress" placeholder="fileAddress" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">接口访问协议</label>
+						<div class="col-sm-10">
+							<label class="radio-inline"><input type="radio" v-model="fields.netProtocol" name="netProtocol" id="netProtocol1" value="Database"/>Database</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.netProtocol" name="netProtocol" id="netProtocol2" value="RESTful"/>RESTful</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.netProtocol" name="netProtocol" id="netProtocol3" value="WebService"/>WebService</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="netURL" class="col-sm-2 control-label">接口URL</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.netURL" class="form-control" id="netURL" placeholder="netURL" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="netClientId" class="col-sm-2 control-label">接口ClientId</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.netClientId" class="form-control" id="netClientId" placeholder="netClientId" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="netToken" class="col-sm-2 control-label">接口Token</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.netToken" class="form-control" id="netToken" placeholder="netToken" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">是否存储</label>
+						<div class="col-sm-10">
+							<label class="radio-inline"><input type="radio" v-model="fields.isStored" name="isStored" id="isStored1" value="1"/>是</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.isStored" name="isStored" id="isStored2" value="0"/>否</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">是否结构化数据</label>
+						<div class="col-sm-10">
+							<label class="radio-inline"><input type="radio" v-model="fields.isStructured" name="isStructured" id="isStructured1" value="1"/>是</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.isStructured" name="isStructured" id="isStructured2" value="0"/>否</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+
+						<label id="netArgs" class="col-sm-2 control-label">接口参数列表-<small>（rest接口的输入参数，数据库接口和webservice不需要配置。）</small></label>
+						<div class="col-sm-10">
+
+							<div class="form-group">
+								<label for="argName" class="col-sm-2 control-label">参数中文名称</label>
+								<div class="col-sm-10">
+									<input type="text" v-model="netArgs.argName" class="form-control" id="argName" placeholder="argName" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="argCode" class="col-sm-2 control-label">参数英文名称</label>
+								<div class="col-sm-10">
+									<input type="text" v-model="netArgs.argCode" class="form-control" id="argCode" placeholder="argCode" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="argType" class="col-sm-2 control-label">参数类型</label>
+								<div class="col-sm-10">
+									<input type="text" v-model="netArgs.argType" class="form-control" id="argType" placeholder="argType" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="remark" class="col-sm-2 control-label">备注</label>
+								<div class="col-sm-10">
+									<input type="text" v-model="netArgs.remark" class="form-control" id="remark" placeholder="remark" />
+								</div>
+							</div>
+
+							<p style="text-align: right;"> <button v-on:click="add()" type="button" class="btn btn-lg btn-primary">添加  » </button> </p>
+
+							<ul id="dataInfoUl">
+								<li v-for="(item,index) in fields.netArgs">
+									{{ (index + 1) }} | {{ item.argName }} -- {{ item.argCode }} -- {{ item.argType }} -- {{ item.remark }} --
+									<a href="#netArgs" v-on:click="del(index)">删除</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="responseFormat" class="col-sm-2 control-label">接口反馈格式</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.responseFormat" class="form-control" id="responseFormat" placeholder="responseFormat" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="responseDataNode" class="col-sm-2 control-label">接口反馈格式数据节点名称(多层用.隔开)</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.responseDataNode" class="form-control" id="responseDataNode" placeholder="responseDataNode" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">数据库类型</label>
+						<div class="col-sm-10">
+							<label class="radio-inline"><input type="radio" v-model="fields.dbType" name="dbType" id="dbType1" value="MYSQL"/>MYSQL</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.dbType" name="dbType" id="dbType2" value="ORACLE"/>ORACLE</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.dbType" name="dbType" id="dbType2" value="DB2"/>DB2</label>
+							<label class="radio-inline"><input type="radio" v-model="fields.dbType" name="dbType" id="dbType2" value="SQLSERVER"/>SQLSERVER</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dbAddress" class="col-sm-2 control-label">数据库地址</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dbAddress" class="form-control" id="dbAddress" placeholder="dbAddress" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dbPort" class="col-sm-2 control-label">数据库端口</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dbPort" class="form-control" id="dbPort" placeholder="dbPort" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dbUsername" class="col-sm-2 control-label">数据库用户名</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dbUsername" class="form-control" id="dbUsername" placeholder="dbUsername" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dbPassword" class="col-sm-2 control-label">数据库用户名密码</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dbPassword" class="form-control" id="dbPassword" placeholder="dbPassword" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dbInstance" class="col-sm-2 control-label">数据库实例名称</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dbInstance" class="form-control" id="dbInstance" placeholder="dbInstance" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="dbTable" class="col-sm-2 control-label">数据表名称</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dbTable" class="form-control" id="dbTable" placeholder="dbTable" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="incrTimestamp" class="col-sm-2 control-label">增量时间戳</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.incrTimestamp" class="form-control" id="incrTimestamp" placeholder="incrTimestamp" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="incrDatetime" class="col-sm-2 control-label">增量时间</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.incrDatetime" class="form-control" id="incrDatetime" placeholder="incrDatetime" />
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="dateFormat" class="col-sm-2 control-label">日期类型格式</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.dateFormat" class="form-control" id="dateFormat" placeholder="dateFormat" />
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="encoding" class="col-sm-2 control-label">文件编码</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.encoding" class="form-control" id="encoding" placeholder="encoding" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="linesTerminated" class="col-sm-2 control-label">行分隔符</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.linesTerminated" class="form-control" id="linesTerminated" placeholder="linesTerminated" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="fieldsTerminated" class="col-sm-2 control-label">列分隔符</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.fieldsTerminated" class="form-control" id="fieldsTerminated" placeholder="fieldsTerminated" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="fieldsDelimited" class="col-sm-2 control-label">列限定符</label>
+						<div class="col-sm-10">
+							<input type="text" v-model="fields.fieldsDelimited" class="form-control" id="fieldsDelimited" placeholder="fieldsDelimited" />
+						</div>
+					</div>
+
+				</form>
+
+				<p style="text-align: right;"> <button type="button" onClick="doSubmit()" class="btn btn-lg btn-primary">提交  » </button> </p>
+
+			</div>
+
+		</div>
+
+		<div class="bs-docs-footer" th:include="manage/foot :: foot"></div>
+		<script src="/sources/js/addRes.js"></script>
+
+	</body>
+
+</html>
