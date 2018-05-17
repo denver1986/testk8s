@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.gwssi.k8s</groupId>
+	<artifactId>TEST_K8S</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<nexus.id>beacon</nexus.id>
+		<nexus.name>beacon</nexus.name>
+		<nexus.snapshot.id>beacon-snapshot</nexus.snapshot.id>
+		<nexus.snapshot.name>beacon-snapshot</nexus.snapshot.name>
+		<nexus.central.id>beacon-central</nexus.central.id>
+		<nexus.central.name>beacon-central</nexus.central.name>
+		<!-- <nexus.url>http://172.16.1.112:44423/repository/maven-releases/</nexus.url>
+		<nexus.snapshot.url>http://172.16.1.112:44423/repository/maven-snapshots/</nexus.snapshot.url>
+		<nexus.central.url>http://172.16.1.112:44423/repository/maven-central/</nexus.central.url> -->
+		<nexus.url>http://106.38.120.12:44423/repository/maven-releases/</nexus.url>
+		<nexus.snapshot.url>http://106.38.120.12:44423/repository/maven-snapshots/</nexus.snapshot.url>
+		<nexus.central.url>http://106.38.120.12:44423/repository/maven-central/</nexus.central.url>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.7</java.version>
+	</properties>
+	<repositories>
+		<repository>
+			<id>${nexus.id}</id>
+			<name>${nexus.name}</name>
+			<url>${nexus.url}</url>
+		</repository>
+		<!--快照库-->
+		<repository>
+			<id>${nexus.snapshot.id}</id>
+			<name>${nexus.snapshot.name}</name>
+			<url>${nexus.snapshot.url}</url>
+		</repository>
+		<repository>
+			<id>${nexus.central.id}</id>
+			<name>${nexus.central.name}</name>
+			<url>${nexus.central.url}</url>
+		</repository>
+		<!-- <repository>
+		<id>central</id>
+		<name>Central Repository</name>
+		<url>http://repo.maven.apache.org/maven2</url>
+		<snapshots>
+		<enabled>false</enabled>
+		</snapshots>
+		</repository>
+		<repository>
+		<id>spy</id>
+		<name>Spy Repository</name>
+		<layout>default</layout>
+		<url>http://files.couchbase.com/maven2/</url>
+		<snapshots>
+		<enabled>false</enabled>
+		</snapshots>
+		</repository> -->
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>${nexus.id}</id>
+			<name>${nexus.name}</name>
+			<url>${nexus.url}</url>
+		</pluginRepository>
+		<!--快照库-->
+		<pluginRepository>
+			<id>${nexus.snapshot.id}</id>
+			<name>${nexus.snapshot.name}</name>
+			<url>${nexus.snapshot.url}</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>${nexus.central.id}</id>
+			<name>${nexus.central.name}</name>
+			<url>${nexus.central.url}</url>
+		</pluginRepository>
+		<!-- 必须要加一个central的官方MavenPlugin否则加-U参数会从官方中央仓库下载插件 -->
+		<pluginRepository>
+			<id>central</id>
+			<name>Maven plugin</name>
+			<url>htpp://repo1.maven.org/maven2</url>
+			<!-- <layout>default</layout>
+			<snapshots>
+			<enabled>false</enabled>
+			</snapshots>
+			<releases>
+			<enabled>true</enabled>
+			</releases> -->
+		</pluginRepository>
+	</pluginRepositories>
+	<!--spring boot的父依赖，用于提供整个系统的版本依赖控制。-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.10.RELEASE</version>
+	</parent>
+	<dependencies>
+		<!--版本管理通过spring-boot-starter-parent 中配置的  dependencyManagement 进行统一管理 这里不需要设置版本号
+		如果dependencies里的dependency自己没有声明version元素，那么maven就
+		会倒dependencyManagement里面去找有没有对该artifactId和groupId进行过版本声明，如果有，就继承它，如果
+		没有就会报错，告诉你必须为dependency声明一个version-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!-- 使用thymeleaf模板  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- spring security  -->
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency> -->
+		<!-- spring security oauth2 -->
+		<!-- <dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+		</dependency> -->
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.5.5</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-collections</groupId>
+		    <artifactId>commons-collections</artifactId>
+		    <version>3.2.2</version>
+		</dependency>
+		<dependency>  
+		    <groupId>dnsjava</groupId>  
+		    <artifactId>dnsjava</artifactId>  
+		    <version>2.1.7</version>  
+		</dependency> 
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>2.9.0</version>
+		</dependency>
+
+		<!--非spring-boot统一管理依赖-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!--commons lang-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!--用于热部署和DEBUG 如果环境变量里配置了就不用配置这部分了
+			<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+			<fork>true</fork>
+			<jvmArguments>-Xms64m -Xmx256m -XX:MaxPermSize=64m</jvmArguments>
+			</configuration>
+			<dependencies>
+			<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>springloaded</artifactId>
+			<version>${spring-loaded.version}</version>
+			</dependency>
+			</dependencies>
+			</plugin>-->
+
+		</plugins>
+	</build>
+
+</project>
