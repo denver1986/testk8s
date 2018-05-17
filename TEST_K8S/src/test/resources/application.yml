@@ -1,0 +1,51 @@
+
+#测试参数
+test:
+    testValue: testValue
+
+#应用参数
+app:
+
+#日志
+logging:
+ level.org.springframework: INFO
+ level.cn.gwssi: DEBUG
+ level.root: INFO
+ file: log/log.log
+ 
+
+#Spring
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html; charset=utf-8
+#    设置缓存为false 为了热部署 host refresh
+    cache: false
+  datasource:  
+    url: jdbc:mysql://106.38.120.12:44408/mysql_tde?characterEncoding=UTF-8  
+    username: root
+    password: Gwssi@2017
+    driverClassName: com.mysql.jdbc.Driver
+    maxIdle: 5
+    maxWait: 10000
+    minIdle: 2
+    initialSize: 3
+    validationQuery: SELECT 1
+  redis:
+    host: 106.38.120.12
+    port: 44411
+  data:
+    mongodb:
+      host: 106.38.120.12
+      port: 44421
+      username: user_bdc
+      password: Gwssi@2017
+      database: bdcpatent
+    
+#环境配置
+server:
+    port: 8080
+    
