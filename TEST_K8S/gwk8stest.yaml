@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gwk8stest
+spec:
+  type: NodePort
+  ports:
+   - port: 8080
+     nodePort: 30022
+  selector:
+    app: gwk8stest
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gwk8stest
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gwk8stest
+    spec:
+      containers:
+       - name: gwk8stest
+         image: aliyun.docker.registry:5000/gwk8s/test
+         env:
+           - name: REDIS_PASSWORD
+             valueFrom:
+               secretKeyRef:
+                 name: dangling-bunny-redis
+                 key: redis-password
+         ports:
+         - containerPort: 8080
