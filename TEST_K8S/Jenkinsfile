@@ -41,9 +41,23 @@ pipeline {
         }
         
         stage('测试') {
-            steps {
-                echo 'test..'
-            }
+            parallel {
+		        stage('单元测试') {
+		          steps {
+		            echo 'hello'
+		          }
+		        }
+		        stage('API测试') {
+		          steps {
+		            echo '11'
+		          }
+		        }
+		        stage('覆盖率测试') {
+		          steps {
+		            echo 'p2'
+		          }
+		        }
+      		}
         }
         
         stage('生成镜像') {
