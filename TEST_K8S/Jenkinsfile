@@ -21,9 +21,9 @@ pipeline {
             }
         }
         
-        stage('CheckOut') {
+        stage('CheckOut') { 
             steps {
-               git credentialsId: 'd3e953c3-60e2-43c7-928e-a787a4600c3a', url: 'https://github.com/denver1986/demo.git'
+               git credentialsId: 'd3e953c3-60e2-43c7-928e-a787a4600c3a', url: 'https://github.com/denver1986/testk8s.git'
             }
         }
         
