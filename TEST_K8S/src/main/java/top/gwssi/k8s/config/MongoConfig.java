@@ -2,7 +2,6 @@ package top.gwssi.k8s.config;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.context.annotation.Configuration;
@@ -14,14 +13,13 @@ import org.xbill.DNS.Type;
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
-import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 
 
 @Configuration
 public class MongoConfig extends AbstractMongoConfiguration {
 
-	String DOMAIN = "estranged-seagull-mongodb-replicaset" ;
+	String DOMAIN = "mongo-mongodb-replicaset" ;
 	
 	@Override
 	protected String getDatabaseName() {
