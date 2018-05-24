@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,8 +23,6 @@ public class TestController {
 
 	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
 	
-	static ArrayList<Thread> list = new ArrayList<Thread>() ;
-
 	@RequestMapping(value = "/1", produces = "application/json;charset=UTF-8")
 	public String test1() {
 		
@@ -50,31 +49,12 @@ public class TestController {
 	}
 	
 
-	@RequestMapping(value = "/3", produces = "application/json;charset=UTF-8")
-	public String test3() {
-		
-		Thread t = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				double i = 1;
-				while(true) {
-					i = Math.sqrt(i) ;
-		    	}
-			}
-		});
-		t.start();
-		list.add(t) ;
+	@RequestMapping(value = "/3/{number}", produces = "application/json;charset=UTF-8")
+	public String test3(@PathVariable(required = true, value = "number") double number) {
+		for(double i =0; i < number; i++) {
+			Math.sqrt(i) ;
+		}
     	return "success" ;
 	}
 	
-	@SuppressWarnings("deprecation")
-	@RequestMapping(value = "/4", produces = "application/json;charset=UTF-8")
-	public String test4() {
-		System.out.println(list.size());
-		for(Thread t : list) {
-			t.stop();
-		}
-		list.clear();
-    	return "success" ;
-	}
 }
