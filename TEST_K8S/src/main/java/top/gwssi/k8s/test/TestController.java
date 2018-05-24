@@ -1,5 +1,6 @@
 package top.gwssi.k8s.test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -20,6 +21,8 @@ public class TestController {
 	private MongoTemplate mongoTemplate;
 
 	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
+	
+	static ArrayList<Thread> list = new ArrayList<Thread>() ;
 
 	@RequestMapping(value = "/1", produces = "application/json;charset=UTF-8")
 	public String test1() {
@@ -44,5 +47,34 @@ public class TestController {
 		jedis.close();
 		
 		return username ;
+	}
+	
+
+	@RequestMapping(value = "/3", produces = "application/json;charset=UTF-8")
+	public String test3() {
+		
+		Thread t = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				double i = 1;
+				while(true) {
+					i = Math.sqrt(i) ;
+		    	}
+			}
+		});
+		t.start();
+		list.add(t) ;
+    	return "success" ;
+	}
+	
+	@SuppressWarnings("deprecation")
+	@RequestMapping(value = "/4", produces = "application/json;charset=UTF-8")
+	public String test4() {
+		System.out.println(list.size());
+		for(Thread t : list) {
+			t.stop();
+		}
+		list.clear();
+    	return "success" ;
 	}
 }
