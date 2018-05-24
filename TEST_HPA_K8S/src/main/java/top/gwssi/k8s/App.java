@@ -1,4 +1,4 @@
-package gwssi.TEST_HPA_K8S;
+package top.gwssi.k8s;
 
 /**
  * Hello world!
